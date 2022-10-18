@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/signa/ontologies/2022/10/untitled-ontology-19#"
+     xml:base="http://www.semanticweb.org/signa/ontologies/2022/10/untitled-ontology-19"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.dei.unipd.it/database2/T20WC">
+        <rdfs:comment xml:lang="en">This ontology provides data realting to T20 Matches</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#batting_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#batting_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#bowling_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#bowling_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#score_card_batting -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#score_card_batting">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#score_card_bowling -->
+
+    <owl:ObjectProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#score_card_bowling">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#BF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#BF">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Batsman -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Batsman">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Bowler -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Bowler">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#DebutMatch -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#DebutMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#ER -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#ER">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Maidens -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Maidens">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Match_Conditions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Match_Conditions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Match_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Match_Date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Match_Id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Match_Id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Opponent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Opponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Overs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Overs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#PlayerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#PlayerName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Player_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Player_id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Player_of_Match -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Player_of_Match">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#R -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#R">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Result -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Result">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Runs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Runs">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#SR -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#SR">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#SeriesYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#SeriesYear">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Team -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Team">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#TeamName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#TeamName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#Players"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Toss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Toss">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Venue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Venue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#match_detail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Wicket -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Wicket">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Wickets -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#Wickets">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#bowlingOpponent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#bowlingOpponent">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#bowlingTeam -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#bowlingTeam">
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#bowling_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#4s -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#4s">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#6s -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dei.unipd.it/database2/T20WC#6s">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.dei.unipd.it/database2/T20WC#batting_data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#Players -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/T20WC#Players">
+        <rdfs:comment xml:lang="en">Contains players from all the teams along with thier country names and thier debuts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#batting_data -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/T20WC#batting_data">
+        <rdfs:comment xml:lang="en">Contains daata related to batting for all players in T20 with each match they played</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#bowling_data -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/T20WC#bowling_data">
+        <rdfs:comment xml:lang="en">Contains data for all the players related to bowling with details of each match</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dei.unipd.it/database2/T20WC#match_detail -->
+
+    <owl:Class rdf:about="http://www.dei.unipd.it/database2/T20WC#match_detail">
+        <rdfs:comment xml:lang="en">Contains all the matches with attributes related to match</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
